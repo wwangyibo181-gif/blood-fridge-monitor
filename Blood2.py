@@ -30,7 +30,8 @@ def send_line_message_api(message):
     }
     try:
         requests.post(url, headers=headers, data=json.dumps(payload))
-    except pass
+    except Exception:
+        pass
 
 # =========================================================================
 # 🖥️ เริ่มต้นระบบหน้าจอ Dashboard (Streamlit)
