@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 # ⚙️ ส่วนระบุรหัสเชื่อมต่อ LINE Messaging API
 # =========================================================================
 LINE_CHANNEL_ACCESS_TOKEN = "vJxP2EGlEQ5+/lDxOLiNtcK2a5e5H8+V03mLXMgr/kbKN1pTxkxcnicQPBBrof97BeI1Z45+L5CTHjQ/05Lc2RmUxo7YG1AV5hpUvI9KMepN8BjaP78Ay7Fg8NVcEyLv2SC82v46CDF0kXd4MRu/JgdB04t89/1O/w1cDnyilFU="
-LINE_USER_ID = "C039904d88e1bc08adccbf29ecb7edacb"
+LINE_USER_ID = "U9d767558f5deee192b4c1d2e920600e9"
 
 TEMP_MIN_SAFE = 2.0
 TEMP_MAX_SAFE = 6.0
