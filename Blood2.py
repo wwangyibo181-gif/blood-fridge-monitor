@@ -162,6 +162,25 @@ with st.expander("คลิกเพื่อเปิด/ปิด ตารา
     })
     log_df['ผลการประเมิน'] = ["✅ คงที่" if (TEMP_MIN_SAFE <= t <= TEMP_MAX_SAFE) else "❌ ผิดปกติ" for t in st.session_state.temp_history]
     log_df = log_df.iloc[::-1].reset_index(drop=True)
+
+
+    # --- พิมพ์เพิ่มต่อท้ายที่บรรทัดล่างสุดของไฟล์ Blood2.py ---
+import streamlit as st
+
+st.write("---")
+st.subheader("🧪 โซนทดสอบระบบแจ้งเตือน (สำหรับนักพัฒนา)")
+
+# สร้างปุ่มกดจำลองบนหน้าเว็บ
+if st.button("🚨 กดเพื่อทดสอบยิงไลน์กลุ่ม (จำลองค่าวิกฤต)"):
+    # ข้อความที่จะลองยิงเข้ากลุ่ม
+    test_message = "🚨 [TEST] ระบบจำลองสถานการณ์: ตู้แช่เลือดที่ 1 อุณหภูมิพุ่งสูงเกินกำหนด (8.5°C) กรุณาตรวจสอบห้องปฏิบัติการ"
+    
+    try:
+        # สั่งให้ฟังก์ชันยิง API ทำงานโดยใช้รหัสกลุ่มตัว C ที่เราตั้งไว้
+        send_line_message_api(test_message)
+        st.success("✅ ส่งข้อความทดสอบเข้า LINE กลุ่มเรียบร้อยแล้ว! ลองเช็กในมือถือดูนะคะ")
+    except Exception as e:
+        st.error(f"❌ เกิดข้อผิดพลาดในการส่ง: {e}")
     st.dataframe(log_df, use_container_width=True, hide_index=True)
 
 time.sleep(5)
