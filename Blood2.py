@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 # ⚙️ ส่วนระบุรหัสเชื่อมต่อ LINE Messaging API
 # =========================================================================
 # ⚠️ คุณข้าวหอมเอารหัสจริงมาวางแทนคำว่า วางรหัส... ในเครื่องหมายคำพูดได้เลยครับ
-LINE_CHANNEL_ACCESS_TOKEN = "1cb67231c9862f5354d6274bcbedf7c7"
+LINE_CHANNEL_ACCESS_TOKEN = "vJxP2EGlEQ5+/lDxOLiNtcK2a5e5H8+V03mLXMgr/kbKN1pTxkxcnicQPBBrof97BeI1Z45+L5CTHjQ/05Lc2RmUxo7YG1AV5hpUvI9KMepN8BjaP78Ay7Fg8NVcEyLv2SC82v46CDF0kXd4MRu/JgdB04t89/1O/w1cDnyilFU="
 LINE_USER_ID = "C039904d88e1bc08adccbf29ecb7edacb"
 
 TEMP_MIN_SAFE = 2.0
