@@ -16,9 +16,9 @@ LINE_USER_ID = "C039904d88e1bc08adccbf29ecb7edacb"
 TEMP_MIN_SAFE = 2.0
 TEMP_MAX_SAFE = 6.0
 
+# --- แก้ไขฟังก์ชันส่งข้อความช่วงบรรทัดที่ 19 เป็นต้นไป ให้เป็นแบบนี้ครับ ---
 def send_line_message_api(message):
-    if "ตรงนี้" in LINE_CHANNEL_ACCESS_TOKEN or "ตรงนี้" in LINE_USER_ID or LINE_CHANNEL_ACCESS_TOKEN == "":
-        return
+    # ลบเงื่อนไขดักคำว่า "ตรงนี้" เก่าออกให้หมด เหลือแค่วิ่งไปส่งข้อมูลเลย
     url = 'https://api.line.me/v2/bot/message/push'
     headers = {
         'Content-Type': 'application/json',
@@ -28,8 +28,9 @@ def send_line_message_api(message):
         'to': LINE_USER_ID,
         'messages': [{'type': 'text', 'text': message}]
     }
-    try: requests.post(url, headers=headers, data=json.dumps(payload))
-    except: pass
+    try:
+        requests.post(url, headers=headers, data=json.dumps(payload))
+    except pass
 
 # =========================================================================
 # 🖥️ เริ่มต้นระบบหน้าจอ Dashboard (Streamlit)
