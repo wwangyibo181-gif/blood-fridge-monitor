@@ -11,7 +11,7 @@ from datetime import datetime, timedelta
 # =========================================================================
 # ⚠️ คุณข้าวหอมเอารหัสจริงมาวางแทนคำว่า วางรหัส... ในเครื่องหมายคำพูดได้เลยครับ
 LINE_CHANNEL_ACCESS_TOKEN = "1cb67231c9862f5354d6274bcbedf7c7"
-LINE_USER_ID = "U9d767558f5deee192b4c1d2e920600e9"
+LINE_USER_ID = "C039904d88e1bc08adccbf29ecb7edacb"
 
 TEMP_MIN_SAFE = 2.0
 TEMP_MAX_SAFE = 6.0
